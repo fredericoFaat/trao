@@ -1,0 +1,295 @@
+/* <img src="./assets/imagens/nuvemFundo.png" width="500" height="100" alt="" /> */
+
+:root {
+    font-size: 10px;
+}
+
+/*INÍCIO GERAL------------------------------------------------------------------------------------------------------------------------*/
+.inicioGeral {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90vh;
+    width: 100vw;
+    background-image: url("./assets/imagens/nuvemFundo.png");
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12rem;
+    z-index: 10;
+}
+
+.inicioGeral h1 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    top: 30%;
+}
+/* .tag1 {
+    width: 10vw;
+    padding: 1rem;
+    background-color: beige;
+    position: absolute;
+    top: 10vh;
+    left: 50vw;
+} */
+.menu {
+    z-index: 10;
+    opacity: 1;
+    position: absolute;
+    top: 1.5vh;
+    right: 4vw;
+}
+
+canvas {
+    width: 100vw;
+    height: 90vh;
+}
+
+
+.menuGeral {
+    position: absolute;
+    top: 1.5vh;
+    right: 1.5vw;
+    width: 40rem;
+    height: 40rem;
+}
+
+.menuInicio {
+    position: absolute;
+    top: 1.5vh;
+    left: 1.5vw;
+}
+
+.glass {
+    background: rgba(237, 255, 249, 0.288);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.neonText {
+    color: rgb(101, 198, 255);
+    text-shadow: 0 0 10px rgb(0, 162, 255), 0 0 40px #fff, 0 0 50px rgb(0, 162, 255);
+}
+
+.glowAzul {
+    display: inline-block;
+    transition: 0.2s;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 162, 255);
+    border-radius: 50%;
+    box-shadow: 0 0 2rem rgb(0, 162, 255), 0 0 5rem #fff, 0 0 1rem #fff,
+        0 0 3rem rgb(0, 162, 255), 0 0 5rem rgb(0, 162, 255), 0 0 10rem rgb(0, 162, 255),
+        0 0 10rem rgb(0, 162, 255), 0 0 30rem rgb(0, 162, 255);
+}
+
+.glowAzul:hover {
+    color: white;
+    box-shadow: 0 0 2rem rgb(0, 162, 255), 0 0 5rem #fff, 0 0 1rem #fff,
+        0 0 3rem rgb(0, 162, 255), 0 0 5rem rgb(0, 162, 255), 0 0 10rem rgb(0, 162, 255),
+        0 0 20rem rgb(0, 162, 255), 0 0 30rem rgb(0, 162, 255);
+}
+
+.glowAzulCard {
+    display: inline-block;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.glowAzulCard:hover {
+    box-shadow: 0 0 2rem rgb(151, 217, 255), 0 0 5rem #fff, 0 0 1rem #fff,
+        0 0 3rem rgb(151, 217, 255), 0 0 5rem rgb(151, 217, 255), 0 0 10rem rgb(151, 217, 255),
+        0 0 20rem rgb(151, 217, 255), 0 0 30rem rgb(151, 217, 255);
+}
+
+.glowVerde {
+    display: inline-block;
+    color: #ffffff;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.glowVerde:hover {
+    box-shadow: 0 0 2rem rgb(60, 247, 36), 0 0 5rem #fff, 0 0 1rem #fff,
+        0 0 3rem rgb(60, 247, 36), 0 0 5rem rgb(60, 247, 36), 0 0 10rem rgb(60, 247, 36),
+        0 0 20rem rgb(60, 247, 36), 0 0 30rem rgb(60, 247, 36);
+}
+
+.glowCinza {
+    display: inline-block;
+    color: #ffffff;
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: rgb(61, 61, 61);
+    border-radius: 50%;
+    box-shadow: 0 0 2rem rgb(61, 61, 61), 0 0 5rem #fff, 0 0 1rem #fff,
+        0 0 3rem rgb(61, 61, 61), 0 0 5rem rgb(61, 61, 61), 0 0 10rem rgb(61, 61, 61),
+        0 0 20rem rgb(61, 61, 61), 0 0 30rem rgb(61, 61, 61);
+}
+
+.glowCinza:hover {
+    color: white;
+    box-shadow: 0 0 2rem rgb(61, 61, 61), 0 0 5rem #fff, 0 0 1rem #fff,
+        0 0 3rem rgb(61, 61, 61), 0 0 5rem rgb(61, 61, 61), 0 0 10rem rgb(61, 61, 61),
+        0 0 20rem rgb(61, 61, 61), 0 0 30rem rgb(61, 61, 61);
+}
+
+.glowCinzaCard {
+    display: inline-block;
+    margin: 30rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.glowCinzaCard:hover {
+    box-shadow: 0 0 2rem rgb(100, 100, 100), 0 0 5rem #fff, 0 0 1rem #fff,
+        0 0 3rem rgb(100, 100, 100), 0 0 5rem rgb(100, 100, 100), 0 0 10rem rgb(100, 100, 100),
+        0 0 20rem rgb(100, 100, 100), 0 0 30rem rgb(100, 100, 100);
+}
+
+.glowVermelho {
+    display: inline-block;
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    box-shadow: 0 0 2rem rgb(255, 0, 0), 0 0 5rem #fff, 0 0 1rem #fff,
+        0 0 3rem rgb(255, 0, 0), 0 0 5rem rgb(255, 0, 0), 0 0 10rem rgb(255, 0, 0),
+        0 0 10rem rgb(255, 0, 0), 0 0 30rem rgb(255, 0, 0);
+}
+
+.glowVermelho:hover {
+    box-shadow: 0 0 2rem rgb(255, 0, 0), 0 0 5rem #fff, 0 0 1rem #fff,
+        0 0 3rem rgb(255, 0, 0), 0 0 5rem rgb(255, 0, 0), 0 0 10rem rgb(255, 0, 0),
+        0 0 20rem rgb(255, 0, 0), 0 0 30rem rgb(255, 0, 0);
+}
+
+.proximo {
+    position: absolute;
+    top: 91vh;
+    left: 95vw;
+}
+
+.anterior {
+    position: absolute;
+    top: 91vh;
+    left: 90vw;
+}
+
+.n-button {
+    z-index: 10;
+}
+
+/*CABEÇALHO*/
+.cabecalho {
+    /* margin-left: 1.5vw; */
+    width: 100vw;
+    height: 5.5vh;
+    background-color: #21297e;
+}
+
+.cabecalhoEsquerda {
+    display: inline-flex;
+    margin-top: 0.8vh;
+    align-items: center;
+    font-size: 18rem;
+    z-index: 1;
+}
+
+.cabecalhoDireita {
+    display: inline-flex;
+    margin-top: 0.8vh;
+    align-items: center;
+    font-size: 18rem;
+    z-index: 1;
+}
+
+.cabecalhoEsquerda h1 {
+    text-align: center;
+    margin: auto;
+    padding-top: 4rem;
+    font-weight: bold;
+    font-size: 32rem;
+}
+
+.cabecalhoDireita h1 {
+    text-align: center;
+    margin: auto;
+    padding-top: 4rem;
+    font-weight: bold;
+    font-size: 30rem;
+}
+
+/*MEIO*/
+.meio {
+    position: relative;
+    /* margin-left: 1.5vw; */
+    width: 100vw;
+    height: 88.5vh;
+    /* box-shadow: 0 0 2rem rgb(151, 217, 255), 0 0 5rem #fff, 0 0 1rem #fff,
+        0 0 3rem rgb(151, 217, 255), 0 0 5rem rgb(151, 217, 255), 0 0 10rem rgb(151, 217, 255),
+        0 0 20rem rgb(151, 217, 255), 0 0 30rem rgb(151, 217, 255); */
+}
+
+/*RODAPÉ*/
+.rodape {
+    /* margin-left: 1.5vw; */
+    width: 100vw;
+    height: 6vh;
+    background-color: #21297e;
+}
+
+.rodapeEsquerda {
+    display: inline-flex;
+    margin-left: 1vw;
+    align-items: center;
+    color: white;
+    font-size: 18rem;
+    z-index: 1;
+}
+
+.rodapeEsquerda p {
+    margin-left: 15rem;
+}
+
+.rodapeDireita {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    font-size: 18rem;
+    z-index: 1;
+}
+
+.rodapeDireita p {
+    margin-left: 15rem;
+}
+
+.vidro {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    width: 98vw;
+    height: 97.8vh;
+}
+
+.centralizar {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center {
+    width: 100%;
+    height: 88.5vh;
+}
+
+.centralizado {
+    display: table-cell;
+    vertical-align: middle;
+    height: 88.5vh;
+}

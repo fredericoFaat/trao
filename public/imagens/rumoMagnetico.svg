@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="117.93108mm"
+   height="122.9528mm"
+   viewBox="0 0 117.93108 122.9528"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (1.0.1+r73)"
+   sodipodi:docname="rumoMagnetico.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="421.92148"
+     inkscape:cy="230.18138"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="1920"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-1.2858587,-35.175591)">
+    <g
+       id="g985"
+       inkscape:label="grupoPar">
+      <path
+         style="fill:#000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stop-color:#000000"
+         d="m 48.211712,143.4733 c -0.367496,-0.0531 -1.750615,-0.22903 -3.073601,-0.39099 -5.452168,-0.66747 -12.48044,-2.93374 -17.576789,-5.66765 -6.941521,-3.72375 -13.722942,-9.8625 -18.0364153,-16.32711 -3.246406,-4.8654 -6.095508,-11.70553 -7.264006,-17.43945 -2.75677801,-13.52774 0.383868,-27.35074 8.7661673,-38.582725 1.852001,-2.481617 6.226567,-7.037576 8.720439,-9.08204 5.223788,-4.282429 12.612896,-7.973724 19.510676,-9.746729 3.100174,-0.796869 6.013564,-1.118354 6.013564,-0.663583 0,0.180478 1.373151,11.285077 3.051446,24.676887 l 3.051448,24.34875 0.15832,17.50615 c 0.08708,9.62838 0.235331,20.66327 0.329452,24.52198 l 0.171133,7.01582 -1.576829,-0.0364 c -0.867257,-0.02 -1.877509,-0.0798 -2.245005,-0.13292 z"
+         id="path925" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="11.219578"
+         y="95.942528"
+         id="text877"><tspan
+           sodipodi:role="line"
+           id="tspan875"
+           x="11.219578"
+           y="95.942528"
+           style="fill:#ffffff;stroke-width:0.264583">PARES</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="27.589397"
+         y="44.250149"
+         id="text877-7"><tspan
+           sodipodi:role="line"
+           id="tspan875-5"
+           x="27.589397"
+           y="44.250149"
+           style="fill:#000000;stroke-width:0.264583">359°</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="33.126949"
+         y="154.71091"
+         id="text877-7-3"><tspan
+           sodipodi:role="line"
+           id="tspan875-5-5"
+           x="33.126949"
+           y="154.71091"
+           style="fill:#000000;stroke-width:0.264583">180°</tspan></text>
+    </g>
+    <g
+       id="g976"
+       inkscape:label="grupoImpar">
+      <path
+         style="fill:#000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stop-color:#000000"
+         d="m 74.852478,143.09484 c -0.07712,-0.47774 -0.447188,-3.695 -0.822364,-7.14946 -0.375177,-3.45446 -1.578012,-14.17066 -2.672967,-23.81377 L 69.366319,94.59866 69.662711,70.17029 c 0.163015,-13.435605 0.331755,-24.46918 0.374978,-24.519057 0.143497,-0.165592 7.161217,0.768506 9.78114,1.301925 8.54148,1.739056 17.85249,6.677906 24.099501,12.783113 6.05503,5.917584 10.27752,12.608531 12.87159,20.39633 5.39349,16.192116 1.66621,34.057929 -9.87228,47.320109 -6.66693,7.66288 -16.612031,13.48131 -27.115671,15.86414 -1.55593,0.35298 -3.274535,0.64286 -3.819117,0.6442 -0.910807,0.002 -1.001387,-0.0672 -1.130374,-0.86621 z"
+         id="path931" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="71.422539"
+         y="96.921791"
+         id="text877-3"><tspan
+           sodipodi:role="line"
+           id="tspan875-6"
+           x="71.422539"
+           y="96.921791"
+           style="fill:#ffffff;stroke-width:0.264583">ÍMPARES</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="64.938995"
+         y="44.250149"
+         id="text877-7-6"><tspan
+           sodipodi:role="line"
+           id="tspan875-5-2"
+           x="64.938995"
+           y="44.250149"
+           style="fill:#000000;stroke-width:0.264583">000°</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="65.218826"
+         y="154.71091"
+         id="text877-7-6-9"><tspan
+           sodipodi:role="line"
+           id="tspan875-5-2-1"
+           x="65.218826"
+           y="154.71091"
+           style="fill:#000000;stroke-width:0.264583">179°</tspan></text>
+    </g>
+  </g>
+</svg>
