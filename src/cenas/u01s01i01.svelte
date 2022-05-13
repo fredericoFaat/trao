@@ -1,87 +1,74 @@
 <script>
     import { onMount } from "svelte";
-    import { Button } from "sveltestrap";
+    import {
+        Scene,
+        ArcRotateCamera,
+        Color4,
+        Vector3,
+        HemisphericLight,
+    } from "babylonjs";
+    import * as BABYLON from "babylonjs";
+    import "babylonjs-loaders";
 
+    import storeBabylon from "../store/storeBabylon";
     import storeCenas from "../store/storeCenas";
 
-    import u01Inicio from "./u01Inicio.svelte";
-    import scene2 from "./u01s01i02.svelte";
+    import scene1 from "./u01s01i01.svelte";
+    import scene3 from "./u01s01i03.svelte";
 
+    import { Button } from "sveltestrap";
+    import { gltf } from "./teste.svelte";
 
-    
-    onMount(() => {});
+    var light;
+    var scene;
+    var camera;
 
-   let users = [];
+    const createScene = (canvas, engine) => {
+        scene = new Scene(engine);
+        scene.clearColor = new Color4(1, 1, 1, 1);
+        camera = new ArcRotateCamera(
+            "Camera",
+            Math.PI / 2,
+            Math.PI / 2,
+            2,
+            new Vector3(0, 0, -20),
+            scene
+        );
+        camera.setTarget(Vector3.Zero());
+        camera.attachControl(canvas, true);
+        camera.useAutoRotationBehavior = true;
+        camera.autoRotationBehavior.idleRotationSpeed = 1;
 
-    function adduser() {
-        let user = { username: "kk", password: 555 };
-        fetch("http://localhost:3000/users", {
-            method: "POST",
-            body: JSON.stringify(user),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        })
-            .then((res) => {
-                if (!res.ok) {
-                    throw new Error("Failed");
-                }
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    }
-    function getuser() {
-        fetch("http://192.168.0.116:3000/users")
-            .then((res) => {
-                if (!res.ok) {
-                    throw new Error("Failed");
-                }
-                return res.json();
-            })
-            .then((data) => {
-                users = Object.values(data);
-                console.log(users);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    }
+        light = new HemisphericLight("light", new Vector3(0, 1, -15), scene);
+        light.intensity = 0.7;
 
+        // Import the .env file as a CubeTexture
+        const texture = new BABYLON.CubeTexture(
+            "../assets/environment.env",
+            scene
+        );
+        // Create a skybox mesh using this texture
+        const skybox = scene.createDefaultSkybox(texture, true, 10000, 0.1);
+        BABYLON.SceneLoader.ShowLoadingScreen = false;
+        new BABYLON.SceneLoader.Append("", "data:" + gltf, scene, function () {
+            scene.stopAllAnimations();
+        });
 
+        engine.runRenderLoop(() => {
+            scene.render();
+        });
 
-    //   let scanner = new Instascan.Scanner({
-    //     video: document.getElementById('preview')
-    //   });
+        window.addEventListener("resize", () => {
+            engine.resize();
+        });
 
-    //   scanner.addListener('scan', function (content) {
-    //     console.log(content);
-    //   });
+        return scene;
+    };
 
-    //   Instascan.Camera.getCameras().then(function (cameras) {
-    //     if (cameras.length > 0) {
-    //       scanner.start(cameras[0]);
-    //     } else {
-    //       console.error('No cameras found.');
-    //     }
-    //   }).catch(function (e) {
-    //     console.error(e);
-    //   });
+    onMount(() => {
+        createScene($storeBabylon.canvas, $storeBabylon.engine);
+    });
 </script>
-
-
-
-
-    <!-- svelte-ignore a11y-media-has-caption -->
-    <!-- <video id="preview"></video> -->
-    
-
-
-
-
-
-
-
 
 <!-- HTML FIXO -->
 <div>
@@ -89,7 +76,7 @@
         class="anterior"
         size="lg"
         color="danger"
-        on:click={() => ($storeCenas = u01Inicio)}
+        on:click={() => ($storeCenas = scene1)}
     >
         Anterior
     </Button>
@@ -97,35 +84,15 @@
         class="proximo"
         size="lg"
         color="primary"
-        on:click={() => ($storeCenas = scene2)}
+        on:click={() => ($storeCenas = scene3)}
     >
         Próximo
     </Button>
 </div>
 
 <!-- HTML -->
-<div style="margin:0.5rem;">
-    <Button size="lg" color="warning" on:click={adduser}>anim1</Button>
-    <Button size="lg" color="warning" on:click={getuser}>anim2</Button>
-</div>
-
-<div class="palco">
-
-<ul>
-	{#each users as user}
-		<li>{user.username}</li>
-	{/each}
-</ul>
-</div>
-
+<div />
 
 <!-- CSS -->
 <style>
-    .palco {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: white;
-        z-index: 1;
-    }
 </style>

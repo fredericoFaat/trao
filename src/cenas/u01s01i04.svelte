@@ -1,49 +1,100 @@
 <script>
-	import { Button } from "sveltestrap";
+    import { onMount } from "svelte";
+    import {
+        Scene,
+        ArcRotateCamera,
+        Color4,
+        Vector3,
+        HemisphericLight,
+    } from "babylonjs";
+    import * as BABYLON from "babylonjs";
+    import "babylonjs-loaders";
 
-	import storeCenas from "../store/storeCenas";
+    import storeBabylon from "../store/storeBabylon";
+    import storeCenas from "../store/storeCenas";
 
-	import scene3 from "./u01s01i03.svelte";
-	import scene5 from "./u01s01i05.svelte";
+    
+    import scene1 from "./u01s01i01.svelte";
+    import scene3 from "./u01s01i03.svelte";
 
-	import Layout1 from "../components/layout/7layout1.svelte";
+    import { Button } from "sveltestrap";
+	import { gltf } from './teste.svelte';
+
+    var light;
+    var scene;
+    var camera;
+
+    const createScene = (canvas, engine) => {
+        scene = new Scene(engine);
+        scene.clearColor = new Color4(1, 1, 1, 1);
+        camera = new ArcRotateCamera(
+            "Camera",
+            Math.PI / 2,
+            Math.PI / 2,
+            2,
+            new Vector3(0, 0, -20),
+            scene
+        );
+        camera.setTarget(Vector3.Zero());
+        camera.attachControl(canvas, true);
+        camera.useAutoRotationBehavior = true;
+        camera.autoRotationBehavior.idleRotationSpeed = 1;
+
+        light = new HemisphericLight("light", new Vector3(0, 1, -15), scene);
+        light.intensity = 0.7;
+      
+
+        BABYLON.SceneLoader.ShowLoadingScreen = false;
+        new BABYLON.SceneLoader.Append("", "data:" + gltf, scene, function () {
+            scene.stopAllAnimations();
+         
+        });
+
+
+        engine.runRenderLoop(() => {
+            scene.render();
+        });
+
+        window.addEventListener("resize", () => {
+            engine.resize();
+        });
+
+        return scene;
+    };
+
+
+
+    onMount(() => {
+        createScene($storeBabylon.canvas, $storeBabylon.engine);
+    });
 
 </script>
 
 <!-- HTML FIXO -->
 <div>
-	<Button
-		class="anterior"
-		size="lg"
-		color="danger"
-		on:click={() => ($storeCenas = scene3)}
-	>
-		Anterior
-	</Button>
-	<Button
-		class="proximo"
-		size="lg"
-		color="primary"
-		on:click={() => ($storeCenas = scene5)}
-	>
-		Próximo
-	</Button>
+    <Button
+        class="anterior"
+        size="lg"
+        color="danger"
+        on:click={() => ($storeCenas = scene1)}
+    >
+        Anterior
+    </Button>
+    <Button
+        class="proximo"
+        size="lg"
+        color="primary"
+        on:click={() => ($storeCenas = scene3)}
+    >
+        Próximo
+    </Button>
 </div>
 
 <!-- HTML -->
 <div>
-	<Layout1>
-		<div slot="parte1">
-			<h1>Titulo 1</h1>
-			<p>textoo 11</p>
-		</div>
-		<div slot="parte2">
-			<h1>Titulo 2</h1>
-			<p>texto 222</p>
-		</div>
-	</Layout1>
 </div>
 
 <!-- CSS -->
 <style>
+
 </style>

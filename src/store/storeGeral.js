@@ -1,7 +1,7 @@
 import { writable } from "svelte/store";
 
 const geralState = writable({
-    disciplina: 'Introdução ao Blender',
+    disciplina: 'Tráfego Aéreo',
     objetivo: "Conhecer as principais funções do Blender na elaboração de Objetos de Aprendizagem",
     roteiros: [
         { unidade: "" },
