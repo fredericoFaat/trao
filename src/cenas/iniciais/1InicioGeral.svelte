@@ -1,7 +1,7 @@
 <script>
     import storeCenas from "../../store/storeCenas";
     import geralState from "../../store/storeGeral";
-    import visaoGeral from './2visaoGeral.svelte'
+    import videoIntroducao from './2videoIntroducao.svelte'
     import LayoutInicio from "../../components/layout/1LayoutInicioGeral.svelte";
 	import { Button } from 'sveltestrap';
 
@@ -16,7 +16,7 @@
     class="proximo"
     size="lg"
     color="primary"
-    on:click={() => ($storeCenas = visaoGeral)}
+    on:click={() => ($storeCenas = videoIntroducao)}
 >
     Próximo
 </Button>

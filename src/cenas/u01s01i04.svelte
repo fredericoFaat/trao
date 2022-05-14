@@ -13,12 +13,11 @@
     import storeBabylon from "../store/storeBabylon";
     import storeCenas from "../store/storeCenas";
 
-    
     import scene1 from "./u01s01i01.svelte";
     import scene3 from "./u01s01i03.svelte";
 
     import { Button } from "sveltestrap";
-	import { gltf } from './teste.svelte';
+    import { gltf } from "./teste.svelte";
 
     var light;
     var scene;
@@ -42,14 +41,18 @@
 
         light = new HemisphericLight("light", new Vector3(0, 1, -15), scene);
         light.intensity = 0.7;
-      
 
+        // Import the .env file as a CubeTexture
+        const texture = new BABYLON.CubeTexture(
+            "../assets/environment.env",
+            scene
+        );
+        // Create a skybox mesh using this texture
+        const skybox = scene.createDefaultSkybox(texture, true, 10000, 0.1);
         BABYLON.SceneLoader.ShowLoadingScreen = false;
         new BABYLON.SceneLoader.Append("", "data:" + gltf, scene, function () {
             scene.stopAllAnimations();
-         
         });
-
 
         engine.runRenderLoop(() => {
             scene.render();
@@ -62,12 +65,9 @@
         return scene;
     };
 
-
-
     onMount(() => {
         createScene($storeBabylon.canvas, $storeBabylon.engine);
     });
-
 </script>
 
 <!-- HTML FIXO -->
@@ -91,10 +91,8 @@
 </div>
 
 <!-- HTML -->
-<div>
-</div>
+<div />
 
 <!-- CSS -->
 <style>
-
 </style>

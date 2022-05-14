@@ -2,7 +2,7 @@
     import { Button } from "sveltestrap";
     import geralState from "../store/storeGeral";
     import storeCenas from "../store/storeCenas";
-    import visaoGeral from "./iniciais/2visaoGeral.svelte";
+    import visaoGeral from "./iniciais/3visaoGeral.svelte";
     import scene1 from "./u01s01i01.svelte";
     import LayoutInicioUnidade from "../components/layout/5layoutInicioUnidade.svelte";
 </script>

@@ -4,7 +4,6 @@
 	import storeCenas from "./store/storeCenas";
 	import * as BABYLON from "babylonjs";
 	import LayoutVidro from "./components/layout/layoutVidro.svelte";
-	// import { fade, fly, slide, scale } from "svelte/transition";
 	import inicioGeral from "./cenas/iniciais/1InicioGeral.svelte";
 	import { Button } from 'sveltestrap';
 
