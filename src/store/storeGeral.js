@@ -2,7 +2,7 @@ import { writable } from "svelte/store";
 
 const geralState = writable({
     disciplina: 'Tráfego Aéreo',
-    objetivo: "Conhecer as principais funções do Blender na elaboração de Objetos de Aprendizagem",
+    objetivo: "Interpretar as regras de voo visual e instrumento, bem como as condições para voo visual especial para aeronaves de asas fixas e aeronaves de asas rotativas (helicópteros)",
     roteiros: [
         { unidade: "" },
         { unidade: "1. REGRAS DE VOO" },

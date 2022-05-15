@@ -1,5 +1,17 @@
 <script>
+    //ANTERIOR
+    import u01s01i04 from "./u01s01i04.svelte";
+    //PRÓXIMO
+    import u01s01i06 from "./u01s01i06.svelte";
+    //SVELTE
+    import storeCenas from "../store/storeCenas";
+    import storeBabylon from "../store/storeBabylon";
     import { onMount } from "svelte";
+    //LAYOUT
+    import LayoutSlideA from "../components/layout/7layout1R1C.svelte";
+    //SVELTESTRP
+    import { Button } from "sveltestrap";
+    //BABYLONJS
     import {
         Scene,
         ArcRotateCamera,
@@ -10,14 +22,9 @@
     import * as BABYLON from "babylonjs";
     import "babylonjs-loaders";
 
-    import storeBabylon from "../store/storeBabylon";
-    import storeCenas from "../store/storeCenas";
-
-    import scene1 from "./u01s01i01.svelte";
-    import scene3 from "./u01s01i03.svelte";
-
-    import { Button } from "sveltestrap";
     import { gltf } from "./teste.svelte";
+
+    //SCRIPTS
 
     var light;
     var scene;
@@ -76,7 +83,7 @@
         class="anterior"
         size="lg"
         color="danger"
-        on:click={() => ($storeCenas = scene1)}
+        on:click={() => ($storeCenas = u01s01i04)}
     >
         Anterior
     </Button>
@@ -84,14 +91,13 @@
         class="proximo"
         size="lg"
         color="primary"
-        on:click={() => ($storeCenas = scene3)}
+        on:click={() => ($storeCenas = u01s01i06)}
     >
         Próximo
     </Button>
 </div>
 
 <!-- HTML -->
-<div />
 
 <!-- CSS -->
 <style>

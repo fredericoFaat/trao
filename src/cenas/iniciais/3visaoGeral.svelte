@@ -2,7 +2,7 @@
   	import { Button } from 'sveltestrap';
     import LayoutVisaoGeral from "../../components/layout/2layoutVisaoGeral.svelte";
     import storeCenas from "../../store/storeCenas";
-    import inicioGeral from "./1InicioGeral.svelte";
+    import videoIntroducao from './2videoIntroducao.svelte'
     import storeGeral from "../../store/storeGeral";
     import u01Inicio from "../u01Inicio.svelte"
 
@@ -14,7 +14,7 @@
     class="anterior"
     size="lg"
     color="danger"
-    on:click={() => ($storeCenas = inicioGeral)}
+    on:click={() => ($storeCenas = videoIntroducao)}
 >
     Anterior
 </Button>

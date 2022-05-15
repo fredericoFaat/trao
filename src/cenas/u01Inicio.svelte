@@ -1,12 +1,16 @@
 <script>
-    import { Button } from "sveltestrap";
-    import geralState from "../store/storeGeral";
-    import storeCenas from "../store/storeCenas";
+    //ANTERIOR
     import visaoGeral from "./iniciais/3visaoGeral.svelte";
-    import scene1 from "./u01s01i01.svelte";
-    import LayoutInicioUnidade from "../components/layout/5layoutInicioUnidade.svelte";
-</script>
-
+   //PRÓXIMO
+   import u01s01i01 from "./u01s01i01.svelte";
+   //STORE
+   import geralState from "../store/storeGeral";
+    import storeCenas from "../store/storeCenas";       
+   //LAYOUT
+   import LayoutInicioUnidade from "../components/layout/5layoutInicioUnidade.svelte";
+   //SVELTESTRP
+       import { Button } from "sveltestrap";
+   </script>
 <!-- HTML FIXO -->
 
 <div>
@@ -22,7 +26,7 @@
         class="proximo"
         size="lg"
         color="primary"
-        on:click={() => ($storeCenas = scene1)}
+        on:click={() => ($storeCenas = u01s01i01)}
     >
         Próximo
     </Button>
