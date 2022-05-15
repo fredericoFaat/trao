@@ -1,12 +1,15 @@
 <script>
-    import storeCenas from "../store/storeCenas";
-
-    import scene1 from "./u01s01i01.svelte";
-    import scene3 from "./u01s01i03.svelte";
-
-    import LayoutSlideA from "../components/layout/7layout1R1C.svelte";
-    import { Button } from "sveltestrap";
-</script>
+    //ANTERIOR
+       import u01s01i08 from "./u01s01i08.svelte";
+   //PRÓXIMO
+       import u01s01i10 from "./u01s01i10.svelte";
+   //STORE
+       import storeCenas from "../store/storeCenas";
+   //LAYOUT
+       import LayoutSlideA from "../components/layout/7layout1R1C.svelte";
+   //SVELTESTRP
+       import { Button } from "sveltestrap";
+   </script>
 
 <!-- HTML FIXO -->
 <div>
@@ -14,7 +17,7 @@
         class="anterior"
         size="lg"
         color="danger"
-        on:click={() => ($storeCenas = scene1)}
+        on:click={() => ($storeCenas = u01s01i08)}
     >
         Anterior
     </Button>
@@ -22,24 +25,27 @@
         class="proximo"
         size="lg"
         color="primary"
-        on:click={() => ($storeCenas = scene3)}
+        on:click={() => ($storeCenas = u01s01i10)}
     >
         Próximo
     </Button>
 </div>
 
-<!-- HTML -->
+<!-- HTML MÍNIMOS METEOROLÓGICOS DE AERÓDROMOS -->
 <LayoutSlideA>
     <div slot="parte1">
-        <h1>CRITÉRIOS GERAIS</h1>
+        <h1>MÍNIMOS METEOROLÓGICOS DE AERÓDROMO</h1>
         <p>
-          XXXXX
+            Todo voo inicia e termina num aeródromo e é a partir dele que uma
+            aeronave manterá as regras VFR. Para isso estabeleceu-se condições
+            de distâncias verticais e horizontais mínimas para atender ao voo
+            VFR. Abaixo destes mínimos, será proibido utilização do aeródromo
+            para pouso, decolagem ou mesmo aproximação. Os aeródromos terão suas
+            operações suspensas do voo VFR quando:
         </p>
-        <p>Elementos para limites visuais:</p>
         <ul>
-            <li>- Visibilidade mínima</li>
-            <li>- Velocidade máxima</li>
-            <li>- Altitude ou altura mínima e máxima</li>
+            <li>- O teto for inferior a 1500 pés (450m); ou</li>
+            <li>- A visibilidade no solo for inferior a 5Km.</li>
         </ul>
     </div>
 </LayoutSlideA>

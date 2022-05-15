@@ -8,7 +8,7 @@
     import storeBabylon from "../store/storeBabylon";
     import { onMount } from "svelte";
     //LAYOUT
-    import LayoutSlideA from "../components/layout/7layout1R1C.svelte";
+
     //SVELTESTRP
     import { Button } from "sveltestrap";
     //BABYLONJS
@@ -22,41 +22,54 @@
     import * as BABYLON from "babylonjs";
     import "babylonjs-loaders";
 
-    import { gltf } from "./teste.svelte";
+    import { gltf } from "./cena2.svelte";
 
     //SCRIPTS
 
     var light;
     var scene;
     var camera;
-
+    let passo = 1;
+    let ani01;
+    let ani02;
+    let ani03;
+    let ani04;
+    let ani05;
+    
     const createScene = (canvas, engine) => {
         scene = new Scene(engine);
-        scene.clearColor = new Color4(1, 1, 1, 1);
+        scene.clearColor = new Color4(0.08, 0.1, 0.07, 1);
         camera = new ArcRotateCamera(
             "Camera",
             Math.PI / 2,
             Math.PI / 2,
-            2,
-            new Vector3(0, 0, -20),
+            20,
+            new Vector3(0, 0, 0),
             scene
         );
         camera.setTarget(Vector3.Zero());
         camera.attachControl(canvas, true);
 
-        light = new HemisphericLight("light", new Vector3(0, 1, -15), scene);
-        light.intensity = 0.7;
+        camera.lowerAlphaLimit = Math.PI/2;
+        camera.upperAlphaLimit = Math.PI/2;
+        camera.lowerBetaLimit = Math.PI/2;
+        camera.upperBetaLimit = Math.PI/2;
+        camera.lowerRadiusLimit = 20;
+        camera.upperRadiusLimit = 20;
 
-        // Import the .env file as a CubeTexture
-        const texture = new BABYLON.CubeTexture(
-            "../assets/environment.env",
-            scene
-        );
-        // Create a skybox mesh using this texture
-        const skybox = scene.createDefaultSkybox(texture, true, 10000, 0.1);
+
+        light = new HemisphericLight("light", new Vector3(0, 1, 0), scene);
+        light.intensity = 1;
+
+
         BABYLON.SceneLoader.ShowLoadingScreen = false;
         new BABYLON.SceneLoader.Append("", "data:" + gltf, scene, function () {
             scene.stopAllAnimations();
+            ani01 = scene.getAnimationGroupByName("ani01");
+            ani02 = scene.getAnimationGroupByName("ani02");
+            ani03 = scene.getAnimationGroupByName("ani03");
+            ani04 = scene.getAnimationGroupByName("ani04");
+            ani05 = scene.getAnimationGroupByName("ani05");
         });
 
         engine.runRenderLoop(() => {
@@ -73,6 +86,33 @@
     onMount(() => {
         createScene($storeBabylon.canvas, $storeBabylon.engine);
     });
+
+    function passos() {
+        if (passo == 1) {
+            ani01.play();
+            passo = 2;
+        }
+        else if (passo == 2) {
+            ani02.play();
+            passo = 3;
+        }
+        else if (passo == 3) {
+            ani03.play();
+            passo = 4;
+        }
+        else if (passo == 4) {
+            ani04.play();
+            passo = 5;
+        }
+        else {
+            ani05.play();
+            passo = 1;
+        };
+    }
+
+
+
+
 </script>
 
 <!-- HTML FIXO -->
@@ -95,8 +135,14 @@
     </Button>
 </div>
 
-<!-- HTML -->
-
+<!-- HTML(BLENDER) ESPAÇO AÉREO B -->
+<Button        
+        size="lg"
+        color="primary"
+        on:click={passos}
+    >
+        PASSOS
+    </Button>
 <!-- CSS -->
 <style>
 </style>
