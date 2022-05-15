@@ -43,8 +43,6 @@
         );
         camera.setTarget(Vector3.Zero());
         camera.attachControl(canvas, true);
-        camera.useAutoRotationBehavior = true;
-        camera.autoRotationBehavior.idleRotationSpeed = 1;
 
         light = new HemisphericLight("light", new Vector3(0, 1, -15), scene);
         light.intensity = 0.7;
