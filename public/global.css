@@ -165,12 +165,14 @@ canvas {
     position: absolute;
     top: 91vh;
     left: 95%;
+    z-index:1;
 }
 
 .anterior {
     position: absolute;
     top: 91vh;
     left: 90%;
+    z-index:1;
 }
 
 .n-button {

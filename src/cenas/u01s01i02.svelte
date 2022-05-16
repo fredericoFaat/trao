@@ -7,7 +7,7 @@
        import storeCenas from "../store/storeCenas";
    //LAYOUT
        import LayoutSlideA from "../components/layout/7layout1R1C.svelte";
-   //SVELTESTRP
+   //SVELTESTRAP
        import { Button } from "sveltestrap";
    </script>
 

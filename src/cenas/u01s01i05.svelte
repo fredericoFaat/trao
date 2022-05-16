@@ -9,7 +9,7 @@
     import { onMount } from "svelte";
     //LAYOUT
 
-    //SVELTESTRP
+    //SVELTESTRAP
     import { Button } from "sveltestrap";
     //BABYLONJS
     import {
