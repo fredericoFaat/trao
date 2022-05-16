@@ -8,11 +8,12 @@
     import storeCenas from "../store/storeCenas";       
    //LAYOUT
    import LayoutInicioUnidade from "../components/layout/5layoutInicioUnidade.svelte";
-   //SVELTESTRP
+   //SVELTESTRAP
        import { Button } from "sveltestrap";
    </script>
-<!-- HTML FIXO -->
 
+
+<!-- HTML FIXO -->
 <div>
     <Button
         class="anterior"
@@ -35,8 +36,7 @@
 <!-- HTML -->
 
 <LayoutInicioUnidade>
-    <h1 slot="assuntos">{ $geralState.roteiros[1]["unidade"] }</h1>
-    <h2 slot="unidade">UNIDADE 1</h2>
+    <span slot="assuntos">{ $geralState.roteiros[1].unidade }</span>    
 </LayoutInicioUnidade>
 
 <!-- CSS -->
